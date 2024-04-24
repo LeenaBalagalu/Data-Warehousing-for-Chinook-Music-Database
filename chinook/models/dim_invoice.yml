@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dim_invoice
+    description: Invoice Dimension. One row per invoice
+    columns:
+      - name: invoicekey
+        description: The surrogate key of the invoice
+        tests:
+          - not_null
+          - unique
+      - name: invoiceid
+        description: The business / source key of the invoice
+        tests:
+          - not_null
+          - unique
+      - name: customerid
+        description: The business / source key of the customer
+        tests:
+          - unique

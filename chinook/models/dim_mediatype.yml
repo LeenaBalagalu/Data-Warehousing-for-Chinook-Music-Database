@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_mediatype
+    description: mediatype Dimension. One row per mediatype
+    columns:
+      - name: mediatypekey
+        description: The surrogate key of the mediatype
+        tests:
+          - not_null
+          - unique
+      - name: mediatypeid
+        description: The business / source key of the mediatype 
+        tests:
+          - not_null
+          - unique
+      - name: trackid
+        description: The business / source key of the track
+        tests:
+          - not_null
+          - unique

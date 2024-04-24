@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: fact_track_review
+    description: one row per a track revviews 
+    columns:
+      - name: trackreviewkey
+        description: Dimension key for dim_customer_track_review
+      - name: trackkey
+        description: Dimension key for dim_track
+      - name: trackname
+        description: name of the track 
+      - name: sentiment
+        description: review given by the description(like- 1& dislike 0)
