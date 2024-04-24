@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: fact_song_sales
+    description: one row per monthly orders of a single song  
+    columns:
+      - name: invoicekey
+        description: Dimension key for dim_invoice
+      - name: trackkey
+        description: Dimension key for dim_track
+      - name: customerkey
+        description: Dimension key for dim_customer
+      - name: month
+        description: Dimension key for dim_date
+      - name: songname
+        description: name of the song
+      - name: monthlyquantity
+        description: Total number of sales in a month
+      - name: monthlysoldamount
+        description: Total revenue generated in a month

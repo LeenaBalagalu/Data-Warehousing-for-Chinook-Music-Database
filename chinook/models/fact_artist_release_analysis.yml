@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fact_artist_release_analysis
+    description: one row per artist track releases everyday 
+    columns:
+      - name: trackkey
+        description: Dimension key for dim_track
+      - name: artistkey
+        description: Dimension key for dim_artist
+      - name: artist_name
+        description: name of the artist 
+      - name: album_releases
+        description: total number of albums made by artist 
+      - name: track_releases
+        description: Total number of tracks made by artist

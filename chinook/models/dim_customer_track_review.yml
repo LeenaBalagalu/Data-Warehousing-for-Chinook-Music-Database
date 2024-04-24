@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_customer_track_review
+    description: Customer Track review Dimension. One row per customer track review 
+    columns:
+      - name: trackreviewkey
+        description: The surrogate key of the customer track review
+        tests:
+          - not_null
+          - unique
+      - name: customerid
+        description: The business / source key of the customer
+        tests:
+          - not_null
+          - unique
+      - name: trackid
+        description: The business / source key of the track
+        tests:
+          - not_null
+          - unique

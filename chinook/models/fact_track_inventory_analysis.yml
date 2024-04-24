@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: fact_track_inventory_analysis
+    description: one row per each track inventory
+    columns:
+      - name: trackkey
+        description: Dimension key for dim_track
+      - name: albumkey
+        description: Dimension key for dim_album
+      - name: mediatypekey
+        description: Dimension key for dim_mediatype
+      - name: artistid
+        description: id of artist
+      - name: albumname
+        description: name of the album
+      - name: totaltracks
+        description: total track present in the album
+      - name: AverageTrackLength
+        description: average length of the track in album
+      - name: totalstorage
+        description: the total storage used 
