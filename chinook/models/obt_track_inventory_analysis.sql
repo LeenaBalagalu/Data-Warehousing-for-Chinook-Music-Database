@@ -10,9 +10,16 @@ d_track as (
 d_mediatype as (
     select * from {{ ref('dim_mediatype') }}
 )
-select  
-f.artistid,f.albumname,f.totaltracks,f.AverageTrackLength,f.totalstorage
-from f_trackinventoryanalysis f
-left join d_album al on al.albumkey = f.albumkey
-left join d_track t on t.trackkey = f.trackkey
-left join d_mediatype m on m.mediatypekey = f.mediatypekey
+SELECT
+ f.artistid,
+    f.albumname,
+    f.totaltracks,
+    f.AverageTrackLength,
+    f.totalstorage
+FROM f_trackinventoryanalysis f
+LEFT JOIN d_album al
+    ON CAST(al.albumkey AS VARCHAR) = CAST(f.albumkey AS VARCHAR)
+LEFT JOIN d_track t
+    ON CAST(t.trackkey AS VARCHAR) = CAST(f.trackkey AS VARCHAR)
+LEFT JOIN d_mediatype m
+    ON CAST(m.mediatypekey AS VARCHAR) = CAST(f.mediatypekey AS VARCHAR)
